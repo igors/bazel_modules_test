@@ -8,17 +8,7 @@ ts_library(
     module_name = "@root/module",
     module_root = "src",
     deps = [
-        # "@npm//@apollo/federation",
-        # "@npm//@apollo/gateway",
-        # "@npm//@sentry/node",
-        # "@npm//@types",
-        # "@npm//apollo-server-express",
-        # "@npm//axios",
-        # "@npm//dd-trace",
-        # "@npm//express",
-        # "@npm//graphql-extensions",
-        # "@npm//hot-shots",
-        # "@npm//opentracing",
-        # "@npm//supertest",
+        "@npm//@bazel/typescript",
+        "@npm//typescript"
     ]
 )
