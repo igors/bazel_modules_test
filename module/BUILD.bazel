@@ -5,7 +5,7 @@ ts_library(
     name = "lib",
     srcs = glob(["src/**/*.ts"], exclude=["src/**/*.spec.ts"]),
     # data = ["package.json"],
-    module_name = "@root/module",
+    module_name = "@root/module/foo/bar/baz",
     module_root = "src",
     deps = [
         "@npm//@bazel/typescript",
