@@ -5,6 +5,7 @@
         "moduleResolution": "node",
         "module": "commonjs",
         "declaration": true,
+        "declarationMap": true,
         "inlineSourceMap": true,
         "esModuleInterop": true,
         "strict": true,
@@ -19,7 +20,7 @@
         "skipLibCheck": true,
         "types": [],
         "paths": {
-            "ems/*": ["*"]
+            "@root/module/foo/bar/baz": ["module/src"]
         },
 
     }
