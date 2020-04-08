@@ -1,5 +1,6 @@
 package(default_visibility=["//visibility:public"])
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
 
 ts_library(
     name = "lib",
@@ -10,18 +11,12 @@ ts_library(
     deps = [
         "//module:lib"
     ]
-    # deps = [
-    #     "@npm//@apollo/federation",
-    #     "@npm//@apollo/gateway",
-    #     "@npm//@sentry/node",
-    #     "@npm//@types",
-    #     "@npm//apollo-server-express",
-    #     "@npm//axios",
-    #     "@npm//dd-trace",
-    #     "@npm//express",
-    #     "@npm//graphql-extensions",
-    #     "@npm//hot-shots",
-    #     "@npm//opentracing",
-    #     "@npm//supertest",
-    # ]
+)
+
+nodejs_binary(
+    name = "bin",
+    data = [
+        ":lib",
+    ],
+    entry_point = ":src/index.ts",
 )
