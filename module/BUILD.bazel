@@ -1,0 +1,24 @@
+package(default_visibility=["//visibility:public"])
+load("@npm_bazel_typescript//:index.bzl", "ts_library")
+
+ts_library(
+    name = "lib",
+    srcs = glob(["src/**/*.ts"], exclude=["src/**/*.spec.ts"]),
+    # data = ["package.json"],
+    module_name = "@root/module",
+    module_root = "src",
+    deps = [
+        # "@npm//@apollo/federation",
+        # "@npm//@apollo/gateway",
+        # "@npm//@sentry/node",
+        # "@npm//@types",
+        # "@npm//apollo-server-express",
+        # "@npm//axios",
+        # "@npm//dd-trace",
+        # "@npm//express",
+        # "@npm//graphql-extensions",
+        # "@npm//hot-shots",
+        # "@npm//opentracing",
+        # "@npm//supertest",
+    ]
+)

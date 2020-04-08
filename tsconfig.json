@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "declaration": true,
+        "inlineSourceMap": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "traceResolution": false,
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "pretty": true,
+        "skipLibCheck": true,
+        "types": [],
+        "paths": {
+            "ems/*": ["*"]
+        },
+
+    }
+}
