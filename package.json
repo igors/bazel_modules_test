@@ -1,5 +1,9 @@
 {
     "name": "bazel_module_test",
     "version": "0.1.0",
-    "private": true
+    "private": true,
+    "devDependencies": {
+        "@bazel/typescript": "latest",
+        "typescript": "~3.7.3"
+    }
 }
