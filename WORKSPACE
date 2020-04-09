@@ -17,7 +17,7 @@ npm_install(
     package_lock_json = "//:package-lock.json"
 )
 
-node_repositories(package_json = ["//:package.json"])
+node_repositories()
 
 load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")
 install_bazel_dependencies()
