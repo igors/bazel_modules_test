@@ -1,3 +1,3 @@
-import { MODULE_FOO } from "@root/module/foo/bar/baz";
+import { MODULE_FOO } from "@root/module";
 
 console.log( MODULE_FOO );
