@@ -1,6 +1,8 @@
 package(default_visibility=["//visibility:public"])
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
 load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image", "container_push")
+load("@io_bazel_rules_docker//nodejs:image.bzl", "nodejs_image")
 
 ts_library(
     name = "lib",
@@ -20,3 +22,17 @@ nodejs_binary(
     ],
     entry_point = ":src/index.ts",
 )
+
+container_image(
+    name = "base_image",
+    base = "@nodejs12100//image",
+)
+
+nodejs_image(
+    name = "docker",
+    base = ":base_image",
+    data = [
+        ":lib",
+    ],
+    entry_point = ":src/index.ts"
+ )
