@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "baseUrl": ".",
+        "outDir": "build",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "declaration": true,
+        "declarationMap": true,
+        "inlineSourceMap": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "traceResolution": false,
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "pretty": true,
+        "skipLibCheck": true,
+        "types": []
+    }
+}
